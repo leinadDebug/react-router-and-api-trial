@@ -6,6 +6,7 @@ import About from "./components/About";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import SomethingBig from "./components/SomethingBig";
+import CountryApi from "./components/CountryApi" 
 
 function App() {
   const [data, setdata] = useState();
@@ -39,6 +40,8 @@ function App() {
           <Route path=":id" element={<About />} />
         </Route>
         <Route path="/Something" element={<SomethingBig/>}/>
+        <Route path="/country" element={<CountryApi/>}/>
+        <Route path="*" element={<p>Not found</p>}/>
       </Routes>
 
 
